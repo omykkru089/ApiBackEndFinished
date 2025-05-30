@@ -18,10 +18,10 @@ export class UsersController {
   findAll() {
     return this.usersService.findAll();
   }
-  @UseGuards(AuthGuard)
+  @Auth(Role.USER)
   @Get('me')
   getMe(@Req() req) {
-    return this.usersService.findOne(req.user.id);
+    return this.usersService.findMe(req.user.id);
   }
   @Auth(Role.USER)
   @Get(':id')
