@@ -41,6 +41,7 @@ async findOneByName(nombre: string): Promise<Plataforma> {
   async deleteAllPlataforma(){
     try {
     await this.plataformaRepository.createQueryBuilder().delete().execute();
+    await this.plataformaRepository.query('ALTER TABLE plataforma ALTER COLUMN id RESTART WITH 1'); // Añade esta línea
     return { message: 'Todas las categorías han sido eliminadas' };
   } catch (error) {
     throw new InternalServerErrorException('Error al eliminar todas las categorías');

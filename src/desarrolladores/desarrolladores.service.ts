@@ -38,8 +38,9 @@ async findOneByName(nombre: string): Promise<Desarrolladore> {
   }
 
   async deleteAllDesarrollador(){
-    try {
+  try {
     await this.desarrolladorRepository.createQueryBuilder().delete().execute();
+    await this.desarrolladorRepository.query('ALTER TABLE desarrolladore ALTER COLUMN id RESTART WITH 1'); // Añade esta línea
     return { message: 'Todas las categorías han sido eliminadas' };
   } catch (error) {
     throw new InternalServerErrorException('Error al eliminar todas las categorías');

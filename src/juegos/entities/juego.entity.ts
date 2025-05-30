@@ -27,7 +27,7 @@ export class Juego {
   @ManyToOne(() => Desarrolladore, (desarrolladore) => desarrolladore.nombre, { eager: true })
   desarrollador: Desarrolladore;
 
-  @Column({ type: 'enum', enum: ['PC', 'Xbox', 'Playstation', 'Nintendo'], default: 'PC' })
+  @Column({ type: 'enum', enum: ['PC', 'Xbox', 'PlayStation', 'Nintendo'], default: 'PC' })
   dispositivo: string;
 
   @Column()

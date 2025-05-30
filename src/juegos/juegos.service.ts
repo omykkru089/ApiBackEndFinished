@@ -165,6 +165,7 @@ async findAll() {
   async deleteAllJuegos(){
     try {
     await this.juegoRepository.createQueryBuilder().delete().execute();
+    await this.juegoRepository.query('ALTER TABLE juego ALTER COLUMN id RESTART WITH 1'); // Añade esta línea
     return { message: 'Todas las categorías han sido eliminadas' };
   } catch (error) {
     throw new InternalServerErrorException('Error al eliminar todas las categorías');

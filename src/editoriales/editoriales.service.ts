@@ -41,6 +41,7 @@ async findOneByName(nombre: string): Promise<Editoriale> {
   async deleteAllEditorial(){
     try {
     await this.editorialRepository.createQueryBuilder().delete().execute();
+    await this.editorialRepository.query('ALTER TABLE editoriale ALTER COLUMN id RESTART WITH 1'); // Añade esta línea
     return { message: 'Todas las categorías han sido eliminadas' };
   } catch (error) {
     throw new InternalServerErrorException('Error al eliminar todas las categorías');

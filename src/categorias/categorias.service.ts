@@ -42,6 +42,7 @@ async remove(id: number) {
 async deleteAllCategoria() {
   try {
     await this.categoriaRepository.createQueryBuilder().delete().execute();
+    await this.categoriaRepository.query('ALTER TABLE categoria ALTER COLUMN id RESTART WITH 1'); // Añade esta línea
     return { message: 'Todas las categorías han sido eliminadas' };
   } catch (error) {
     throw new InternalServerErrorException('Error al eliminar todas las categorías');
