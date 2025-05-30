@@ -40,12 +40,12 @@
         "dispositivos": "Xbox"
       },
       {
-        "nombre": "PlayStation Store",
+        "nombre": "Playstation Store",
         "descripcion": "Plataforma de distribución digital de Sony",
         "fundador": "PlayStation",
         "anio_de_lanzamiento": "xxx",
         "tipos_de_medios_compatibles": "descargas digitales",
-        "dispositivos": "PlayStation"
+        "dispositivos": "Playstation"
       },
       {
         "nombre": "Nintendo eShop",
