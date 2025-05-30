@@ -164,10 +164,7 @@ async findAll() {
 
   async deleteAllJuegos(){
     try {
-    await this.juegoRepository.query('ALTER TABLE categoria DISABLE TRIGGER ALL');
-await this.juegoRepository.createQueryBuilder().delete().execute();
-await this.juegoRepository.query('ALTER SEQUENCE categoria_id_seq RESTART WITH 1');
-await this.juegoRepository.query('ALTER TABLE categoria ENABLE TRIGGER ALL');
+    await this.juegoRepository.createQueryBuilder().delete().execute();
     return { message: 'Todas las categorías han sido eliminadas' };
   } catch (error) {
     throw new InternalServerErrorException('Error al eliminar todas las categorías');

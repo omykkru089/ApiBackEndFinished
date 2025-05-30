@@ -32,18 +32,29 @@ export class SeedService {
     ){}
 
     public async loadData(){
-        await this.juegoService.deleteAllJuegos(); // <--- Esto primero
-        await this.categoriaService.deleteAllCategoria();
-        await this.plataformaService.deleteAllPlataforma();
-        await this.editorialService.deleteAllEditorial();
-        await this.desarrolladorService.deleteAllDesarrollador();
-        await this.insertNewCategorias();
-        await this.insertNewPlataformas();
-        await this.insertNewEditoriales();
-        await this.insertNewDesarrolladores();
-        await this.insertNewJuegos();
-        await this.insertNewClavesJuegos();
-      }
+  // Borra en orden correcto (hijos -> padres)
+  await this.juegoService.deleteAllJuegos();
+  await this.categoriaService.deleteAllCategoria();
+  await this.plataformaService.deleteAllPlataforma();
+  await this.editorialService.deleteAllEditorial();
+  await this.desarrolladorService.deleteAllDesarrollador();
+
+  // Reinicia las secuencias de cada tabla
+  await this.categoriaService['categoriaRepository'].query('ALTER SEQUENCE categoria_id_seq RESTART WITH 1');
+  await this.plataformaService['plataformaRepository'].query('ALTER SEQUENCE plataforma_id_seq RESTART WITH 1');
+  await this.editorialService['editorialRepository'].query('ALTER SEQUENCE editoriale_id_seq RESTART WITH 1');
+  await this.desarrolladorService['desarrolladorRepository'].query('ALTER SEQUENCE desarrolladore_id_seq RESTART WITH 1');
+  await this.juegoService['juegoRepository'].query('ALTER SEQUENCE juego_id_seq RESTART WITH 1');
+  await this.clavesJuegosService['clavesjuegosRepository'].query('ALTER SEQUENCE clave_juego_id_seq RESTART WITH 1');
+
+  // Ahora sí, inserta los datos
+  await this.insertNewCategorias();
+  await this.insertNewPlataformas();
+  await this.insertNewEditoriales();
+  await this.insertNewDesarrolladores();
+  await this.insertNewJuegos();
+  await this.insertNewClavesJuegos();
+}
 
 
       private async insertNewJuegos() {
