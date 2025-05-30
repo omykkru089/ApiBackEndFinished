@@ -7,11 +7,12 @@ import { DesarrolladoresModule } from 'src/desarrolladores/desarrolladores.modul
 import { EditorialesModule } from 'src/editoriales/editoriales.module';
 import { PlataformasModule } from 'src/plataformas/plataformas.module';
 import { ClavesJuegosModule } from 'src/clavesjuegos/clavesjuegos.module';
+import { AuthModule } from 'src/auth/auth.module';
 
 @Module({
   controllers: [SeedController],
   providers: [SeedService],
-  imports: [
+  imports: [ AuthModule,
     JuegosModule,CategoriasModule,DesarrolladoresModule,EditorialesModule,PlataformasModule,ClavesJuegosModule
   ]
 })

@@ -24,6 +24,6 @@ app.enableCors({
   credentials: true,
 });
 
-  await app.listen(3001);
+  await app.listen(parseInt(process.env.PORT) || 3000);
 }
 bootstrap();
