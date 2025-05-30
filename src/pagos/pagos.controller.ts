@@ -42,7 +42,6 @@ async createCheckout(@Body() body: { items: any[], userId: number }) {
 
   // Nuevo endpoint para asignar claves tras el pago
   @Post('asignar-claves')
-  @UseGuards(AuthGuard)
 async asignarClaves(@Body() body: { userId: number }) {
   // Busca el pedido pendiente más reciente del usuario
   const pedido = await this.pedidoRepository.findOne({
