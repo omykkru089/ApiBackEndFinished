@@ -34,6 +34,9 @@ export class SeedService {
     public async loadData(){
         await this.juegoService.deleteAllJuegos(); // <--- Esto primero
         await this.categoriaService.deleteAllCategoria();
+        await this.plataformaService.deleteAllPlataforma();
+        await this.editorialService.deleteAllEditorial();
+        await this.desarrolladorService.deleteAllDesarrollador();
         await this.insertNewCategorias();
         await this.insertNewPlataformas();
         await this.insertNewEditoriales();

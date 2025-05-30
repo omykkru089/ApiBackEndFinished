@@ -163,14 +163,11 @@ async findAll() {
   }
 
   async deleteAllJuegos(){
-    const query = this.juegoRepository.createQueryBuilder('juego');
-    try{
-      return await query  
-        .delete()
-        .where({})
-        .execute()
-    }catch(error){
-      throw new InternalServerErrorException('sysadmin juego ...')
-    }
+    try {
+    await this.juegoRepository.createQueryBuilder().delete().execute();
+    return { message: 'Todas las categorías han sido eliminadas' };
+  } catch (error) {
+    throw new InternalServerErrorException('Error al eliminar todas las categorías');
   }
+}
 }

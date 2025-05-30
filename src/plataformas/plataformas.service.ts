@@ -39,14 +39,11 @@ async findOneByName(nombre: string): Promise<Plataforma> {
   }
 
   async deleteAllPlataforma(){
-    const query = this.plataformaRepository.createQueryBuilder('plataforma');
-    try{
-      return await query  
-        .delete()
-        .where({})
-        .execute()
-    }catch(error){
-      throw new InternalServerErrorException('sysadmin plataforma ...')
-    }
+    try {
+    await this.plataformaRepository.createQueryBuilder().delete().execute();
+    return { message: 'Todas las categorías han sido eliminadas' };
+  } catch (error) {
+    throw new InternalServerErrorException('Error al eliminar todas las categorías');
   }
+}
 }

@@ -39,14 +39,11 @@ async findOneByName(nombre: string): Promise<Editoriale> {
   }
 
   async deleteAllEditorial(){
-    const query = this.editorialRepository.createQueryBuilder('editorial');
-    try{
-      return await query  
-        .delete()
-        .where({})
-        .execute()
-    }catch(error){
-      throw new InternalServerErrorException('sysadmin editorial ...')
-    }
+    try {
+    await this.editorialRepository.createQueryBuilder().delete().execute();
+    return { message: 'Todas las categorías han sido eliminadas' };
+  } catch (error) {
+    throw new InternalServerErrorException('Error al eliminar todas las categorías');
+  }
   }
 }

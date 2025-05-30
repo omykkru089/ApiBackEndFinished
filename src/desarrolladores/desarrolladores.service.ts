@@ -38,14 +38,11 @@ async findOneByName(nombre: string): Promise<Desarrolladore> {
   }
 
   async deleteAllDesarrollador(){
-    const query = this.desarrolladorRepository.createQueryBuilder('desarrollador');
-    try{
-      return await query  
-        .delete()
-        .where({})
-        .execute()
-    }catch(error){
-      throw new InternalServerErrorException('sysadmin desarrollador ...')
-    }
+    try {
+    await this.desarrolladorRepository.createQueryBuilder().delete().execute();
+    return { message: 'Todas las categorías han sido eliminadas' };
+  } catch (error) {
+    throw new InternalServerErrorException('Error al eliminar todas las categorías');
+  }
   }
 }
