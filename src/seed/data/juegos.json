@@ -39,7 +39,7 @@
         "nombre": "Borderlands 2",
         "descripcion": ["Un juego post-apocalíptico donde puedes jugar con amigos o solo.", "Armas muy poderosas para matar jefes en un escenario de puro humor."],
         "categoria": "Disparos (Shooter)",
-        "plataforma": "Playstation Store",
+        "plataforma": "PlayStation Store",
         "editorial": "2KGames",
         "desarrollador": "CyberConnect2",
         "precio": "12",
@@ -51,7 +51,7 @@
         "requisitos_del_sistema": ["x"],
         "popularidad": "6/10",
         "link": ["comprar-borderlands2-ps4", "comprar-borderlands2-pc","comprar-borderlands2-xbox","comprar-borderlands2-nintendo"],
-        "dispositivo": "Playstation"
+        "dispositivo": "PlayStation"
       },
       {
         "nombre": "Borderlands 2",
@@ -105,7 +105,7 @@
         "requisitos_del_sistema": ["x"],
         "popularidad": "9/10",
         "link": ["comprar-callofduty-blackops2-ps4", "comprar-callofduty-blackops2-pc", "comprar-callofduty-blackops2-xbox"],
-        "dispositivo": "Playstation"
+        "dispositivo": "PlayStation"
     },
     {
         "nombre": "Black ops 2",
@@ -177,7 +177,7 @@
         "requisitos_del_sistema": ["x"],
         "popularidad": "10/10",
         "link": ["comprar-minecraft-ps4","comprar-minecraft-pc","comprar-minecraft-xbox","comprar-minecraft-nintendo"],
-        "dispositivo": "Playstation"
+        "dispositivo": "PlayStation"
       },
       {
         "nombre": "Minecraft",
