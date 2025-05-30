@@ -1,9 +1,10 @@
 import { Pedido } from '../pedidos/entities/pedido.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Controller, Post, Body, NotFoundException } from '@nestjs/common';
+import { Controller, Post, Body, NotFoundException, Req, UseGuards } from '@nestjs/common';
 import Stripe from 'stripe';
 import { ClavesJuegosService } from '../clavesjuegos/clavesjuegos.service';
+import { AuthGuard } from 'src/auth/guard/auth.guard';
 
 @Controller('pagos')
 export class PagosController {
@@ -29,8 +30,8 @@ async createCheckout(@Body() body: { items: any[], userId: number }) {
       },
       quantity: item.cantidad,
     })),
-    success_url: `gameshop-flax.vercel.app/pago-exitoso?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: 'gameshop-flax.vercel.app/carrito',
+    success_url: `https://gameshop-flax.vercel.app/pago-exitoso?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: 'https://gameshop-flax.vercel.app/carrito',
     metadata: {
       userId: body.userId,
       items: JSON.stringify(body.items.map(i => ({ id: i.id, cantidad: i.cantidad }))),
@@ -41,6 +42,7 @@ async createCheckout(@Body() body: { items: any[], userId: number }) {
 
   // Nuevo endpoint para asignar claves tras el pago
   @Post('asignar-claves')
+  @UseGuards(AuthGuard)
 async asignarClaves(@Body() body: { userId: number }) {
   // Busca el pedido pendiente más reciente del usuario
   const pedido = await this.pedidoRepository.findOne({
