@@ -1,0 +1,58 @@
+[
+    {
+        "nombre": "Steam",
+        "descripcion": "La mayor plataforma de venta de juegos y donde mas gente juega",
+        "fundador": "Valve Corporation",
+        "anio_de_lanzamiento": "Windows: September 12, 2003, MacOS: May 12, 2010, Mobile: January 26, 2012    Linux: February 14, 2013",
+        "tipos_de_medios_compatibles": "descargas digitales",
+        "dispositivos": "PC"
+    },
+    {
+        "nombre": "Epic Games",
+        "descripcion": "Plataforma de videojuegos siendo una de las mas usadas a dia de hoy",
+        "fundador": "Tim Sweeney",
+        "anio_de_lanzamiento": "Epic Games se fundó inicialmente bajo el nombre de Potomac Computer Systems en 1991 por Tim Sweeney en Potomac (Maryland)",
+        "tipos_de_medios_compatibles": "descargas digitales",
+        "dispositivos": "PC"
+    },
+    {
+        "nombre": "Ubisoft",
+        "descripcion": "es una empresa desarrolladora y distribuidora de videojuegos francesa",
+        "fundador": "Christian Guillemot, Claude Guillemot, Gérard Guillemot, Michel Guillemot, Yves Guillemot",
+        "anio_de_lanzamiento": "fundaron Ubi Soft en 1986 en Morbihan en la Bretaña francesa. En 1989",
+        "tipos_de_medios_compatibles": "descargas digitales",
+        "dispositivos": "PC"
+    },
+    {
+        "nombre": "Microsoft",
+        "descripcion": "es una empresa de distribucion digital de software desarrollada por Microsoft",
+        "fundador": "Bill Gates",
+        "anio_de_lanzamiento": "fue lanzada el 29 de febrero de 2012",
+        "tipos_de_medios_compatibles": "descargas digitales",
+        "dispositivos": "PC"
+    },
+    {
+        "nombre": "Microsoft Store",
+        "descripcion": "Plataforma de distribución digital de Microsoft",
+        "fundador": "Microsoft",
+        "anio_de_lanzamiento": "2012",
+        "tipos_de_medios_compatibles": "descargas digitales",
+        "dispositivos": "Xbox"
+      },
+      {
+        "nombre": "PlayStation Store",
+        "descripcion": "Plataforma de distribución digital de Sony",
+        "fundador": "PlayStation",
+        "anio_de_lanzamiento": "xxx",
+        "tipos_de_medios_compatibles": "descargas digitales",
+        "dispositivos": "PlayStation"
+      },
+      {
+        "nombre": "Nintendo eShop",
+        "descripcion": "Plataforma de distribución digital de Nintendo",
+        "fundador": "Nintendo",
+        "anio_de_lanzamiento": "xxx",
+        "tipos_de_medios_compatibles": "descargas digitales",
+        "dispositivos": "Nintendo"
+      }
+]

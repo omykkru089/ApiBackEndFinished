@@ -1,0 +1,39 @@
+[
+    {      
+        "nombre": "Acción y Aventura",
+        "descripcion": "se centran en la acción y la aventura, donde los jugadores suelen explorar entornos, resolver acertijos y enfrentarse a desafíos mientras avanzan en la historia."
+    },
+    {
+        "nombre": "Estrategia y Simulación",
+        "descripcion": "encontrarás juegos que requieren pensamiento estratégico y planificación, como juegos de estrategia en tiempo real, juegos de gestión de recursos, simuladores de vida, etc."
+    },
+    {
+        "nombre": "Disparos (Shooter)",
+        "descripcion": "engloba juegos de disparos en primera persona (FPS) y en tercera persona (TPS), donde los jugadores enfrentan combates armados contra enemigos u otras criaturas."
+    },
+    {
+        "nombre": "RPG (Rol de Acción y Juegos de Rol)",
+        "descripcion": "Incluye juegos de rol de acción, donde los jugadores asumen el papel de un personaje y exploran mundos fantásticos, completan misiones y desarrollan habilidades."
+    },
+    {
+        "nombre": "Indie y Juegos de Arte",
+        "descripcion": "Aquí encontrarás juegos independientes y experimentales que ofrecen experiencias únicas en términos de narrativa, arte, música y mecánicas de juego."
+    },
+    {
+        "nombre": "Multijugador Masivo en Línea (MMO)",
+        "descripcion": "Esta categoría incluye juegos en línea que permiten a miles de jugadores interactuar entre sí en un mundo virtual persistente, como MMORPGs, juegos de disparos en línea masivos (MMOFPS), etc."
+    },
+    {
+        "nombre": "Mundo Abierto (Open World)",
+        "descripcion": "Esta categoría engloba juegos que ofrecen un vasto mundo abierto para explorar libremente, con actividades y misiones opcionales dispersas por el entorno."
+    },
+    {
+        "nombre": "Combate y Artes Marciales",
+        "descripcion": "Aquí encontrarás juegos de lucha y artes marciales que ofrecen combates uno a uno o en equipo entre personajes con habilidades únicas."
+    },
+    {
+        "nombre": "Exploración y Descubrimiento",
+        "descripcion": "Incluye juegos centrados en la exploración de entornos naturales o urbanos, donde los jugadores descubren secretos, recolectan objetos y desbloquean nuevas áreas"
+    }
+
+]

@@ -1,0 +1,52 @@
+
+[
+    {
+        "nombre": "GearBox Software",
+        "descripcion": "desarrollador de videojuegos y distribuidora de juegos con gran cantidad de fundadores y gran variedad de juegos increibles",
+        "pais_origen": "Texas",
+        "anio_fundacion": "Enero 1999",
+        "sitio_web": "https://www.gearboxsoftware.com/"
+        },
+        {
+        "nombre": "Ubisoft",
+        "descripcion": "es un editor de juegos creado en Francia",
+        "pais_origen": "Francia",
+        "anio_fundacion": "28/03/1986",
+        "sitio_web": "https://www.ubisoft.com/en-us/"
+        },
+        {
+        "nombre": "Treyarch",
+        "descripcion": "es una compañia de desarrollo de juegos estadounidense.",
+        "pais_origen": "Estados Unidos",
+        "anio_fundacion": "año 1996",
+        "sitio_web": "https://www.treyarch.com/"
+        },
+        {
+        "nombre": "Epic Games",
+        "descripcion": "es una empresa desarrolladora de videjuegos estadounidense",
+        "pais_origen": "Estados Unidos",
+        "anio_fundacion": "Año 1991",
+        "sitio_web": "https://www.epicgames.com/site/es-ES/home"
+        },
+        {
+        "nombre": "Bandai Namco Studios",
+        "descripcion": "empresa derivada de las divisiones de desarrollo de juegos de la editorial Namco Bandai Games",
+        "pais_origen": "Japon",
+        "anio_fundacion": "02/04/2012",
+        "sitio_web": "https://es.bandainamcoent.eu/"
+        },
+        {
+        "nombre": "CyberConnect2",
+        "descripcion": "empresa desarrolladora de juegos japonesa con sede en Hakta (Japon)",
+        "pais_origen": "Japon",
+        "anio_fundacion": "16/02/1996",
+        "sitio_web": "https://www.cc2.co.jp/"
+        },
+        {
+        "nombre": "Mojang",
+        "descripcion": "empresa desarrolladora de juegos sueca",
+        "pais_origen": "Suecia",
+        "anio_fundacion": "XX/05/2009",
+        "sitio_web": "https://www.minecraft.net/en-us/article/meet-mojang-stud"
+        }
+]

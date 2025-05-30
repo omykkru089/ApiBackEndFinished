@@ -1,0 +1,47 @@
+[
+  {
+    "clave": "AbcDeFgHiJKlMnOPqRsT",
+    "estado": "libre",
+    "juego": 1
+  },
+  {
+    "clave": "uVwXyZAbCdeFgHiJkLmN",
+    "estado": "libre",
+    "juego": 1
+  },
+  {
+    "clave": "OpQrSTuVwXYzAbCDeFGh",
+    "estado": "libre",
+    "juego": 1
+  },
+  {
+    "clave": "IjKlMNoPqRStUvWXyZaB",
+    "estado": "libre",
+    "juego": 1
+  },
+  {
+    "clave": "CdEfGHiJkLMnOpQRsTuV",
+    "estado": "libre",
+    "juego": 2
+  },
+  {
+    "clave": "WxYzABCdefGHIjkLMNop",
+    "estado": "libre",
+    "juego": 2
+  },
+  {
+    "clave": "QrStUVwXyZAbCDeFgHiJ",
+    "estado": "libre",
+    "juego": 3
+  },
+  {
+    "clave": "KlMnOPqRsTUvWxYZAbCd",
+    "estado": "libre",
+    "juego": 3
+  },
+  {
+    "clave": "EfGhIJkLmNOpQrSTuVwX",
+    "estado": "libre",
+    "juego": 4
+  }
+]
