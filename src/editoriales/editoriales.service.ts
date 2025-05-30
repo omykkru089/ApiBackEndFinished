@@ -40,8 +40,10 @@ async findOneByName(nombre: string): Promise<Editoriale> {
 
   async deleteAllEditorial(){
     try {
-    await this.editorialRepository.createQueryBuilder().delete().execute();
-    await this.editorialRepository.query('ALTER TABLE editoriale ALTER COLUMN id RESTART WITH 1'); // Añade esta línea
+    await this.editorialRepository.query('ALTER TABLE categoria DISABLE TRIGGER ALL');
+await this.editorialRepository.createQueryBuilder().delete().execute();
+await this.editorialRepository.query('ALTER SEQUENCE categoria_id_seq RESTART WITH 1');
+await this.editorialRepository.query('ALTER TABLE categoria ENABLE TRIGGER ALL');
     return { message: 'Todas las categorías han sido eliminadas' };
   } catch (error) {
     throw new InternalServerErrorException('Error al eliminar todas las categorías');

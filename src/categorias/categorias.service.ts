@@ -41,8 +41,10 @@ async remove(id: number) {
 
 async deleteAllCategoria() {
   try {
-    await this.categoriaRepository.createQueryBuilder().delete().execute();
-    await this.categoriaRepository.query('ALTER TABLE categoria ALTER COLUMN id RESTART WITH 1'); // Añade esta línea
+    await this.categoriaRepository.query('ALTER TABLE categoria DISABLE TRIGGER ALL');
+await this.categoriaRepository.createQueryBuilder().delete().execute();
+await this.categoriaRepository.query('ALTER SEQUENCE categoria_id_seq RESTART WITH 1');
+await this.categoriaRepository.query('ALTER TABLE categoria ENABLE TRIGGER ALL');
     return { message: 'Todas las categorías han sido eliminadas' };
   } catch (error) {
     throw new InternalServerErrorException('Error al eliminar todas las categorías');

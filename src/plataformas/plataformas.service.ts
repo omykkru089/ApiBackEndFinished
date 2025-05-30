@@ -40,8 +40,10 @@ async findOneByName(nombre: string): Promise<Plataforma> {
 
   async deleteAllPlataforma(){
     try {
-    await this.plataformaRepository.createQueryBuilder().delete().execute();
-    await this.plataformaRepository.query('ALTER TABLE plataforma ALTER COLUMN id RESTART WITH 1'); // Añade esta línea
+    await this.plataformaRepository.query('ALTER TABLE categoria DISABLE TRIGGER ALL');
+await this.plataformaRepository.createQueryBuilder().delete().execute();
+await this.plataformaRepository.query('ALTER SEQUENCE categoria_id_seq RESTART WITH 1');
+await this.plataformaRepository.query('ALTER TABLE categoria ENABLE TRIGGER ALL');
     return { message: 'Todas las categorías han sido eliminadas' };
   } catch (error) {
     throw new InternalServerErrorException('Error al eliminar todas las categorías');
