@@ -18,6 +18,11 @@ export class UsersController {
   findAll() {
     return this.usersService.findAll();
   }
+  @UseGuards(AuthGuard)
+  @Get('me')
+  getMe(@Req() req) {
+    return this.usersService.findOne(req.user.id);
+  }
   @Auth(Role.USER)
   @Get(':id')
   findOne(@Param('id') id: number) {
