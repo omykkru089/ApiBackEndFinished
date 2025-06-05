@@ -1,5 +1,5 @@
 import { PartialType } from '@nestjs/mapped-types';
-import { IsOptional, IsString } from 'class-validator';
+import { IsOptional, IsString, IsNumber } from 'class-validator';
 
 export class UpdateClaveJuegoDto {
     @IsString()
@@ -8,4 +8,7 @@ export class UpdateClaveJuegoDto {
     @IsString()
     @IsOptional()
     estado?: string;
+    @IsNumber()
+    @IsOptional()
+    juego_id?: number; // Añadir esta propiedad
 }

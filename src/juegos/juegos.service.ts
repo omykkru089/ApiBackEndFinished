@@ -93,13 +93,7 @@ async findAll() {
       .leftJoinAndSelect('juego.plataforma', 'plataforma') // Incluye la relación con plataforma
       .leftJoinAndSelect('juego.editorial', 'editorial') // Incluye la relación con editorial
       .leftJoinAndSelect('juego.desarrollador', 'desarrollador') // Incluye la relación con desarrollador
-      .where(`
-  EXISTS (
-    SELECT 1
-    FROM json_array_elements_text(juego.link::json) AS elem
-    WHERE elem = :link
-  )
-`, { link })
+      .where(`juego.link->>0 = :link`, { link }) // Utiliza el operador JSON para buscar en el primer elemento del array de links
  // Elimina las comillas dobles del valor extraído
       .getOne();
   

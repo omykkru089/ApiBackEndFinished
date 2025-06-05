@@ -49,4 +49,6 @@ findOne(@Param('id') id: string) {
   remove(@Param('id') id: string) {
     return this.clavesJuegosService.remove(+id);
   }
+
+
 }

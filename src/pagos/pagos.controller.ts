@@ -30,8 +30,8 @@ async createCheckout(@Body() body: { items: any[], userId: number }) {
       },
       quantity: item.cantidad,
     })),
-    success_url: `https://gameshop-flax.vercel.app/pago-exitoso?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: 'https://gameshop-flax.vercel.app/carrito',
+    success_url: `http://localhost:3000/pago-exitoso?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: 'http://localhost:3000/carrito',
     metadata: {
       userId: body.userId,
       items: JSON.stringify(body.items.map(i => ({ id: i.id, cantidad: i.cantidad }))),
